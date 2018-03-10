@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-
-"""Main module."""
 import re
 
 def validate(value, indextype=None, customExpression=None):
@@ -30,4 +27,6 @@ def validate(value, indextype=None, customExpression=None):
 
   expressions = expressions[indextype] if customExpression is None else customExpression
   return bool(re.match(expressions, value))
+
+print(validate("1", 0))
 
